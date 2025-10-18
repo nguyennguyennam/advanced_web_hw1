@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# 🎮 Tic Tac Toe Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Tic Tac Toe (Caro)** game built with **React + Vite + Bootstrap**, featuring an AI opponent, customizable board size, and dynamic visual effects.  
+Designed with an **indie pastel theme** and smooth interactions for an elegant experience. ✨
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+✅ **Play vs AI**  
+Choose between:
+- 🟢 **Easy mode** (Random AI)
+- 🧠 **Hard mode** (Minimax-based AI with heuristic scoring)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ **Dynamic Board Size**  
+Customize your grid — from **3×3 up to 10×10**.  
+(Win condition automatically adapts to board size.)
 
-## Expanding the ESLint configuration
+✅ **Smart Game Logic**  
+- Detects wins, draws, and highlights the winning line.  
+- Keeps track of move history and lets you **jump to any move**.  
+- Toggle **move order sorting** (ascending/descending).  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ **Stylish UI**  
+- Built with **React Bootstrap** for a clean look.  
+- Animated buttons and hover effects.  
+- Indie-inspired **lavender + teal pastel color palette**.  
+- Supports **custom Inika font** from Fontsource.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🖼️ Screenshots
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Gameplay | Settings |
+|-----------|-----------|
+| ![game](./screenshots/game.png) | ![settings](./screenshots/settings.png) |
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Category | Technology |
+|-----------|-------------|
+| Frontend | [React 18](https://react.dev/) |
+| Build Tool | [Vite](https://vitejs.dev/) |
+| UI Framework | [React Bootstrap 5](https://react-bootstrap.github.io/) |
+| Styling | Bootstrap CSS + custom inline styles |
+| Fonts | [@fontsource/inika](https://fontsource.org/fonts/inika) |
+| AI Logic | Custom Minimax algorithm with heuristic evaluation |
+| Language | JavaScript (ES2023) |
+
+---
+
+## 🛠️ Installation & Setup
+
+### 1️⃣ Clone this repository
+```bash
+git clone https://github.com/your-username/tic-tac-toe-react.git
+cd tic-tac-toe-react
