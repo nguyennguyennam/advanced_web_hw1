@@ -30,7 +30,6 @@ Customize your grid — from **3×3 up to 10×10**.
 ---
 
 
----
 
 ## 🧠 Tech Stack
 
